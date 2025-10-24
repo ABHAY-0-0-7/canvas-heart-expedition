@@ -1,0 +1,14 @@
+# Redirect all non-existing routes to index.html with 404 status
+# This ensures proper status codes for enumeration tools like ffuf
+
+# Existing routes return 200
+/                           /index.html   200
+/Gustave                    /index.html   200
+/Maelle                     /index.html   200
+/Lune                       /index.html   200
+/Sciel                      /index.html   200
+/TheHeartOfTheCanvas        /index.html   200
+/success                    /index.html   200
+
+# All other routes return 404
+/*                          /index.html   404
